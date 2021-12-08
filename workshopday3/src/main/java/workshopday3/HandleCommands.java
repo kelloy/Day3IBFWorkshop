@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class HandleCommands 
 {
     private Cart cart;
+    private boolean login = false;
 
     public HandleCommands() {
         cart = new Cart();
@@ -39,6 +40,7 @@ public class HandleCommands
 
                 cart.addItem(strArray[i].trim());
                 System.out.println(strArray[i] + " added to the cart");
+                //TODO write to file with name of user
             }
 
             break;
@@ -100,6 +102,13 @@ public class HandleCommands
                 System.out.println("" + (i+1) + "." + cart.getCart().get(i));
 
             break;
+        }
+    }
+
+
+    public void handleLogin(String command){
+        while("login".equals(command)){
+            
         }
     }
 }

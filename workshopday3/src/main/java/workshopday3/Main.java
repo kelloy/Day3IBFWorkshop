@@ -6,6 +6,15 @@ public class Main
 {
     public static void main(String[] args) {
 
+        if (null != args && args.length>0){
+        //create directory args[0]
+        }
+        else {
+        //create directory db
+        }
+
+
+
         HandleCommands handler = new HandleCommands();
         
         System.out.println("Please use only the following commands: ");
@@ -26,6 +35,8 @@ public class Main
             return;
         }
 
+        //*Boolean login = false;
+
         while (!"exit".equals(command)) {
 
             if ("add".equals(command)) {
@@ -43,6 +54,12 @@ public class Main
                 System.out.println("-- End of list --");
             }
 
+            if ("login".equals(command)){
+                //*handler.handleLogin(command);
+                if (arguments.trim().equals(""))
+                System.out.println("No Username!");
+            }
+
             command = scan.next();
             arguments = scan.nextLine();
         }
@@ -50,6 +67,4 @@ public class Main
         scan.close();
         System.out.println("Program has ended.");
     }
-}
-    
 }
